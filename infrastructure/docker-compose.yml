@@ -23,7 +23,7 @@ services:
      MYSQL_USER: 'dbuser'
      MYSQL_PASS: 'pass'
      ports:
-     - "3306:3306"
+     - 3306:3306
 volumes:
   my-datavolume:
     
