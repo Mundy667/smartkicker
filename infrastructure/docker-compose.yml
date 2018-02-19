@@ -18,10 +18,10 @@ services:
     volumes:
      - my-datavolume:/var/lib/mysql
     environment:
-     - MYSQL_ROOT_PASSWORD: 'mysqlPW2018'
-     - MYSQL_DATABASE: 'goalDB'
-     - MYSQL_USER: 'dbuser'
-     - MYSQL_PASS: 'pass'
+     MYSQL_ROOT_PASSWORD: 'mysqlPW2018'
+     MYSQL_DATABASE: 'goalDB'
+     MYSQL_USER: 'dbuser'
+     MYSQL_PASS: 'pass'
      ports:
      - "3306:3306"
 volumes:
