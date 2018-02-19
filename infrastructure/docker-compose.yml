@@ -1,22 +1,29 @@
 version: '2'
 
 services:
-  php:
-    build: php
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./php/www:/var/www/html
-    links:
-      - db
+#  php:
+#    build: php
+#    ports:
+#      - "80:80"
+#      - "443:443"
+#    volumes:
+#      - ./php/www:/var/www/html
+#    links:
+#      - db
 
   db:
+    container_name: kicker_mysql
+    restart: always
     image: mysql:5.7
     volumes:
-     - /var/lib/mysql
+     - my-datavolume:/var/lib/mysql
     environment:
-     - MYSQL_ROOT_PASSWORD=hunter2
-     - MYSQL_DATABASE=database
-
+     - MYSQL_ROOT_PASSWORD: 'mysqlPW2018'
+     - MYSQL_DATABASE: 'goalDB'
+     - MYSQL_USER: 'dbuser'
+     - MYSQL_PASS: 'pass'
+     ports:
+     - "3306:3306"
+volumes:
+  my-datavolume:
     
