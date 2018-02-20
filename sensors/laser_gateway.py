@@ -15,8 +15,7 @@ if __name__ == '__main__':
     GPIO.setwarnings(False)
     # bin B spaeter nicht vergessen
     GPIO.setup(RECEIVER_A_PIN, GPIO.IN)
-    GPIO.add_event_detect(R
-    RECEIVER_A_PIN, GPIO.RISING, callback=callback_func, bouncetime=200)
+    GPIO.add_event_detect(RECEIVER_A_PIN, GPIO.RISING, callback=callback_func, bouncetime=200)
 
     try:
         while True:
