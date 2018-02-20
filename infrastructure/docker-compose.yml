@@ -1,4 +1,4 @@
-version: '2'
+version: '3.3'
 
 services:
 #  php:
@@ -18,12 +18,11 @@ services:
     volumes:
      - my-datavolume:/var/lib/mysql
     environment:
-     MYSQL_ROOT_PASSWORD: 'mysqlPW2018'
-     MYSQL_DATABASE: 'goalDB'
-     MYSQL_USER: 'dbuser'
-     MYSQL_PASS: 'pass'
-     ports:
-     - 3306:3306
+     MYSQL_ROOT_PASSWORD: 'kicker'
+     MYSQL_DATABASE: 'kicker'
+     MYSQL_USER: 'kicker'
+     MYSQL_PASS: 'kicker'
+     ports: "3306:3306"
 volumes:
   my-datavolume:
     
