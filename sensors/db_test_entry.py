@@ -4,10 +4,10 @@ import sys
 import random
 
 #host ip 172.18.. ist die aktuelle docker ip. intern auf localhost. 
-host = '172.18.0.2'
+host = '192.168.99.100'
 user = 'root'
 password = 'kicker'
-port = 3306
+port = 8989
 db = 'kicker'
 
 con = mdb.connect(

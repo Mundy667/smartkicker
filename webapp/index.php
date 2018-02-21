@@ -37,7 +37,7 @@
               </a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="setNewGame.php">New Game
+              <a class="nav-link" href="php/setNewGame.php">New Game
                 <span class="sr-only">(current)</span>
               </a>
             </li>
@@ -51,14 +51,15 @@
 
     <!-- Page Content -->
     <div class="container">
-    <div class="my-4" align="right"><p><a class="btn btn-primary" href="/setNewGame.php" role="button">Starte ein neues Spiel</a></p></div>
+	<div class="my-4" align="right"><p><a class="btn btn-primary" href="/php/setNewGame.php" role="button">Starte ein neues Spiel</a>
+<a class="btn btn-danger" href="/php/deleteLastTor.php" role="button">l&ouml;sche letztes Tor</a></p></div>
 <script type="text/javascript">
     $(document).ready(function(){
       refreshTable2();
     });
 
     function refreshTable2(){
-        $('#currentGame').load('getCurrentGame.php', function(){
+        $('#currentGame').load('/php/getCurrentGame.php', function(){
            setTimeout(refreshTable2, 1000);
         });
     }
@@ -83,7 +84,7 @@
     });
 
     function refreshTable(){
-        $('#tableHolder').load('getGameResult.php', function(){
+        $('#tableHolder').load('/php/getGameResult.php', function(){
            setTimeout(refreshTable, 1000);
         });
     }
@@ -108,7 +109,7 @@
     });
 
     function refreshTable3(){
-        $('#currentTable').load('getTableResult.php', function(){
+        $('#currentTable').load('/php/getTableResult.php', function(){
            setTimeout(refreshTable3, 1000);
         });
     }
